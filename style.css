@@ -1,0 +1,41 @@
+body{
+    margin:0;
+    padding:0;
+}
+#navbar{
+    position:fixed;
+    background-color: black;
+    width: 100%;
+    padding:20 0;
+    display: flex;
+    justify-content: center;
+    transition:background-color 0.3s ease;
+}
+.pro{
+    color:white;
+    font-size: 30px;
+    margin-top:25px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.pro:hover{
+    color:rgb(135, 118, 118);
+}
+ul{
+    color:white;
+    justify-content: center;
+    display:flex;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:20px;
+    margin-left:30em;
+}
+li{
+    margin:5px;
+    padding:5px;
+    align-items: right;
+    margin-left:50px;
+
+}
+li:hover{
+    color:rgb(135, 131, 131);
+}
