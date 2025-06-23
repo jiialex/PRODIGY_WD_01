@@ -1,6 +1,7 @@
 body{
     margin:0;
     padding:0;
+    background-color: rgb(249, 238, 238);
 }
 #navbar{
     position:fixed;
@@ -8,6 +9,7 @@ body{
     width: 100%;
     padding:20 0;
     display: flex;
+    top:0;
     justify-content: center;
     transition:background-color 0.3s ease;
 }
@@ -55,13 +57,76 @@ a{
 a:hover{
     color:rgb(135, 131, 131);
 }
-.body img{
-background-size: cover;
- background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width:100%;
+#home {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    gap: 2rem;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-wrap: wrap; 
 }
+h1{
+    font-size: 40px;
+}
+p{
+    font-size:20px;
+}
+button{
+    background-color:rgb(189, 184, 184) ;
+    font-size: 20px;
+    border-radius: 20px;
+    box-shadow:-40px ;
+}
+button:hover{
+    background-color:silver;
+}
+ #out{
+    width:300px;
+    height:50%;
+align-content: center;
+justify-content: center;
+display: flex;
+transform:rotate(-6deg);
+transition:transform 0.3s ease;
+}
+#ot{
+     width:300px;
+    height:50%;
+align-content: center;
+justify-content: center;
+display: flex;
+    transform:rotate(5deg);
+    margin-right:30px;
+}
+.about h1{
+    display: flex;
+    justify-content: center;
+}
+p{
+    display: flex;
+    justify-content: center;
+    font-size:25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.about1,
+.about2 {
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    margin-bottom: 20px;
+}
+.about1 img,
+.about2 img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 .sidebar{
     position:fixed;
     right:0;
@@ -83,6 +148,60 @@ background-size: cover;
     margin-right:10px;
 
 }
+#order {
+    padding: 40px 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#order h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#orderForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#orderForm label {
+    font-weight: bold;
+    color: #444;
+}
+
+#orderForm input,
+#orderForm select,
+#orderForm textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+#orderForm textarea {
+    resize: vertical;
+}
+
+#orderForm button {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#orderForm button:hover {
+    background-color: #45a049;
+}
+
 
  @media (max-width: 768px) {
     #navbar {

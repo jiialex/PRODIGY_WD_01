@@ -9,21 +9,17 @@
 <body>
     <section>
         <nav id="navbar">
-            <div class="pro">PRODIGY</div>
+            <div class="pro">JA-shopping</div>
              <ul class="sidebar">
                 <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Detail</a></li>
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="order">Order</a></li>
             </ul>
             <ul>
                 <li class="hideOnMobile"><a href="#">Home</a></li>
                 <li class="hideOnMobile"><a href="#">About</a></li>
-                <li class="hideOnMobile"><a href="#">Service</a></li>
-                <li class="hideOnMobile"><a href="#">Contact</a></li>
-                <li class="hideOnMobile"><a href="#">Detail</a></li>
+                <li class="hideOnMobile"><a href="#">Order</a></li>
                 <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>  </a></li>
 
             </ul>
@@ -31,9 +27,54 @@
 
     </section>
     <section>
-        <div class="body"><img src="back.png"></div>
+        <div id="home">
+            <div class="home-text">
+       <h1>New Winter<br> Collection 2025</h1>
+       <p>New and best clothes with different choices!!</p>
+       <button class="btn" onclick=buyNow()>Buy Now</button>
+       </div>
+        <img id="out" src="outfit.jpg" alt="perfect outfit">
+        <img id="ot" src="otu.jpg" alt="">
+        </div>
     </section>
-    <script>
+    <section>
+        <div class="about">
+            <h1>About us</h1>
+            <p>we have quality products with different sizes</p>
+            <div class="about1">
+            <img src="img1.jpg">
+            <img src="img2.jpg">
+            <img src="img3.jpg">
+            </div>
+            <div class="about2">
+            <img src="img4.jpg">
+            <img src="img5.jpg">
+            <img src="img6.jpg">
+        </div>
+        </section>
+       <section id="order">
+  <h2>Place Your Order</h2>
+  <form id="orderForm">
+    <label for="product">Select Product:</label>
+    <select id="product" name="product">
+      <option value="hoodie">modesty</option>
+      <option value="jacket">skirt</option>
+      <option value="sweater">Sweater</option>
+    </select>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="address">Shipping Address:</label>
+    <textarea id="address" name="address" required></textarea>
+
+    <button type="submit">Submit Order</button>
+  </form>
+</section>
+    <script> 
        function showSidebar() {
   const sidebar = document.querySelector(".sidebar");
   sidebar.style.display = "flex";
@@ -50,7 +91,20 @@ let navbar = document.getElementById('navbar');
         navbar.classList.remove('white');
     }
  })
+ function buyNow(){
+const btn = document.querySelector("btn");
+alert("thanks for your interest! the item has been added");
 
+ }
+ document.getElementById('orderForm').addEventListener('submit', function(event){
+    event.preventDefault();
+    const product = document.getElementById('product').value;
+    const quantity = document.getElementById('quantity').value;
+    const name = document.getElementById('name').value;
+    const address = document.getElementById('address').value;
+    alert(`thanks, ${name}! you've ordered ${quantity} ${product}.it will be shipped to:\n${address}`);
+    console.log({product,quantity,name,address});
+ })
     </script>
 </body>
 </html>
