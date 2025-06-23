@@ -10,15 +10,47 @@
     <section>
         <nav id="navbar">
             <div class="pro">PRODIGY</div>
+             <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Detail</a></li>
+            </ul>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Service</li>
-                <li>Contact</li>
-                <li>Detail</li>
+                <li class="hideOnMobile"><a href="#">Home</a></li>
+                <li class="hideOnMobile"><a href="#">About</a></li>
+                <li class="hideOnMobile"><a href="#">Service</a></li>
+                <li class="hideOnMobile"><a href="#">Contact</a></li>
+                <li class="hideOnMobile"><a href="#">Detail</a></li>
+                <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>  </a></li>
+
             </ul>
         </nav>
+
     </section>
-<script src="script.js"></script>
+    <section>
+        <div class="body"><img src="back.png"></div>
+    </section>
+    <script>
+       function showSidebar() {
+  const sidebar = document.querySelector(".sidebar");
+  sidebar.style.display = "flex";
+}
+function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'none'
+}
+let navbar = document.getElementById('navbar');
+ window.addEventListener('scroll',()=>{
+    if(window.scrollY >= 200){
+        navbar.classList.add('white');
+    }else{
+        navbar.classList.remove('white');
+    }
+ })
+
+    </script>
 </body>
 </html>
